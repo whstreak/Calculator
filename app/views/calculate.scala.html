@@ -1,0 +1,19 @@
+@(formula: String, status: Boolean, result: Float, ret_string: String)
+
+@main("Here is the result:") {
+	<h3 style="color:#191970">
+		Your input is @formula
+	</h3>
+
+	<ul>
+		@if(status) {
+			<li style="color:green;font-size:30px;font-weight:bold;">It evaluates @result</li>
+		} else {
+			<li style="color:red;">@ret_string</li>
+		}
+	</ul>
+
+	<p class="buttons">
+        <a href="@routes.Application.index" style="font-size:15px;font-weight:bold;">Back to Calculator</a>
+    </p>
+}

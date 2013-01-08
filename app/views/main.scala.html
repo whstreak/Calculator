@@ -1,0 +1,45 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+        
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <script src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/sanitycheck.js")" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <header>
+            <a href="@routes.Application.index">@title</a>
+        </header>
+        
+        <section>
+            @content
+        </section>      
+    </body>
+</html>
+
+<script>
+    $(document).ready(function() {
+        $("#formula").change(function() {
+            var valid = true;
+            var input = $(this).val();
+            input = input.replace(/^\s\s*/, "").replace(/\s\s*$/, "");
+
+            if(input.charAt(0) == "*" || input.charAt(0) == "/")
+                valid = false;
+
+            var lastChar = input.charAt(input.length - 1);
+            if(lastChar != ")" || !(lastChar >= "0" && lastChar <= "9"))
+                valid = false;
+            
+            if(!valid) {
+                alert("Invalid algebraic formula!");
+            }
+        });
+    });
+</script>

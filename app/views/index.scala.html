@@ -1,0 +1,21 @@
+@(calculatorForm: Form[Application.Formula])
+
+@import helper._
+
+@main(title = "Welcome to Algebraic Calculator!") {
+    
+    <h1>This calculator supports simple algebraic evaluation.</h1>
+    
+    @form(action = routes.Application.calculate, args = 'id -> "calculatorform") {
+    	@inputText(
+    		field = calculatorForm("formula"),
+    		args = '_label -> "Input your algebraic formula here",
+    		'id -> "formula",
+    		'placeholder -> "3.14+22/(3.14+gauss(3,2,0,1))"
+    	)
+
+    	<p class="buttons">
+    		<input type="submit" value="Evaluate"/>
+    	</p>
+	}
+}

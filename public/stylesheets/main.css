@@ -1,0 +1,85 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, Arial;
+    color: #3A4244;
+}
+
+header {
+    padding: 10px 30px;
+    background: #CAE7EC;
+    font-size: 26px;
+}
+
+header a {
+    color: #1A1E20;
+    text-decoration: none;
+}
+
+section {
+    padding: 10px 30px;
+}
+
+#calculatorform dd {
+    display: inline-block;
+}
+
+#calculatorform dd.info {
+    display: none;
+}
+
+#calculatorform dd.error {
+    margin-left: 10px;
+    font-size: 12px;
+    color: #c00;
+}
+
+#calculatorform label {
+    font-size: 18px;
+    color: #6A5ACD;
+}
+
+#formula {
+    width: 400px;
+    height: 25px;
+    padding: 7px;
+    font-size: 18px;
+    border: 1px solid black;
+}
+
+#calculatorform dl {
+    background: #FAFAFA;
+    padding: 10px;
+}
+
+#calculatorform dl.error {
+    background: #FBDDE6;
+}
+
+#calculatorform dt {
+    display: inline-block;
+    width: 160px;
+}
+
+.buttons {
+    background: #536565;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.buttons input, .buttons a {
+    border: 1px solid #2F3A3A;
+    background: #F5F5F5;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #00BFFF;
+}
+
+ul {
+    padding-left: 20px;
+}
+
